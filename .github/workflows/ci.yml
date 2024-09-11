@@ -38,5 +38,6 @@ jobs:
 
       - name: Run Molecule tests.
         run: |
+          cd nginx
           molecule destroy --all
           molecule test
