@@ -10,7 +10,7 @@ lint: |
 platforms:
   - name: instance-centos
     image: "eazytraining/diveintoansible:centos"
-    command: "/lib/systemd/systemd"
+    command: ${MOLECULE_DOCKER_COMMAND:-"/usr/sbin/init"} #"/lib/systemd/systemd"
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
     privileged: true
